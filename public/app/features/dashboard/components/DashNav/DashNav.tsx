@@ -229,7 +229,7 @@ export const DashNav = React.memo<Props>((props) => {
     const buttons: ReactNode[] = [];
     const tvButton = (
       <ToolbarButton
-        tooltip={t({ id: 'dashboard.toolbar.tv-button', message: 'Cycle view mode' })}
+        tooltip={t({ id: 'dashboard.toolbar.tv-button', message: '循環檢視' })}
         icon="monitor"
         onClick={onToggleTVMode}
         key="tv-button"
@@ -288,7 +288,7 @@ export const DashNav = React.memo<Props>((props) => {
     if (showSettings) {
       buttons.push(
         <ToolbarButton
-          tooltip={t({ id: 'dashboard.toolbar.settings', message: 'Dashboard settings' })}
+          tooltip={t({ id: 'dashboard.toolbar.settings', message: '設置儀錶板' })}
           icon="cog"
           onClick={onOpenSettings}
           key="button-settings"
