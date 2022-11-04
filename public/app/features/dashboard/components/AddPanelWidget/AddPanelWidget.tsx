@@ -155,7 +155,7 @@ export const AddPanelWidgetUnconnected: React.FC<Props> = ({ panel, dashboard })
                 onCreateNewPanel();
               }}
             >
-              Add a new panel
+              新增一個文件
             </CardButton>
             <CardButton
               icon="wrap-text"
@@ -165,7 +165,7 @@ export const AddPanelWidgetUnconnected: React.FC<Props> = ({ panel, dashboard })
                 onCreateNewRow();
               }}
             >
-              Add a new row
+              新增一行
             </CardButton>
             <CardButton
               icon="book-open"
@@ -175,7 +175,7 @@ export const AddPanelWidgetUnconnected: React.FC<Props> = ({ panel, dashboard })
                 setAddPanelView(true);
               }}
             >
-              Add a panel from the panel library
+              從文件庫新增一個文件
             </CardButton>
             {copiedPanelPlugins.length === 1 && (
               <CardButton
