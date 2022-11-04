@@ -19,7 +19,7 @@ export const getSteps = (): SetupStep[] => [
     done: false,
     cards: [
       {
-        type: '教程',
+        type: 'tutorial',
         heading: 'Data source and dashboards',
         title: step1TutorialTitle,
         info: 'Set up and understand Grafana if you have no prior experience. This tutorial guides you through the entire process and covers the “Data source” and “Dashboards” steps to the right.',
