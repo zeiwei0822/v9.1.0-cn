@@ -303,7 +303,7 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
       <QueryOperationRow
         id="Query options"
         index={0}
-        title="Query options"
+        title="查詢選項"
         headerElement={this.renderCollapsedText(styles)}
         isOpen={isOpen}
         onOpen={this.onOpenOptions}
