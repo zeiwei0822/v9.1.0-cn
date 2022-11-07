@@ -210,8 +210,8 @@ export const getAllStandardFieldConfigs = () => {
   const displayName: FieldConfigPropertyItem<any, string, StringFieldConfigSettings> = {
     id: 'displayName',
     path: 'displayName',
-    name: 'Display name',
-    description: 'Change the field or series name',
+    name: '顯示名稱e',
+    description: '更改字段或系列名稱',
     editor: standardEditorsRegistry.get('text').editor as any,
     override: standardEditorsRegistry.get('text').editor as any,
     process: displayNameOverrideProcessor,
@@ -226,7 +226,7 @@ export const getAllStandardFieldConfigs = () => {
   const unit: FieldConfigPropertyItem<any, string, StringFieldConfigSettings> = {
     id: 'unit',
     path: 'unit',
-    name: 'Unit',
+    name: '單位',
     description: '',
 
     editor: standardEditorsRegistry.get('unit').editor as any,
@@ -244,15 +244,15 @@ export const getAllStandardFieldConfigs = () => {
   const min: FieldConfigPropertyItem<any, number, NumberFieldConfigSettings> = {
     id: 'min',
     path: 'min',
-    name: 'Min',
-    description: 'Leave empty to calculate based on all values',
+    name: '最小值',
+    description: '留空時以所有值進行計算',
 
     editor: standardEditorsRegistry.get('number').editor as any,
     override: standardEditorsRegistry.get('number').editor as any,
     process: numberOverrideProcessor,
 
     settings: {
-      placeholder: 'auto',
+      placeholder: ' ',
     },
     shouldApply: (field) => field.type === FieldType.number,
     category,
@@ -261,15 +261,15 @@ export const getAllStandardFieldConfigs = () => {
   const max: FieldConfigPropertyItem<any, number, NumberFieldConfigSettings> = {
     id: 'max',
     path: 'max',
-    name: 'Max',
-    description: 'Leave empty to calculate based on all values',
+    name: '最大值',
+    description: '留空時以所有值進行計算',
 
     editor: standardEditorsRegistry.get('number').editor as any,
     override: standardEditorsRegistry.get('number').editor as any,
     process: numberOverrideProcessor,
 
     settings: {
-      placeholder: 'auto',
+      placeholder: ' ',
     },
 
     shouldApply: (field) => field.type === FieldType.number,
@@ -279,14 +279,14 @@ export const getAllStandardFieldConfigs = () => {
   const decimals: FieldConfigPropertyItem<any, number, NumberFieldConfigSettings> = {
     id: 'decimals',
     path: 'decimals',
-    name: 'Decimals',
+    name: '小數點',
 
     editor: standardEditorsRegistry.get('number').editor as any,
     override: standardEditorsRegistry.get('number').editor as any,
     process: numberOverrideProcessor,
 
     settings: {
-      placeholder: 'auto',
+      placeholder: ' ',
       min: 0,
       max: 15,
       integer: true,
@@ -299,8 +299,8 @@ export const getAllStandardFieldConfigs = () => {
   const noValue: FieldConfigPropertyItem<any, string, StringFieldConfigSettings> = {
     id: 'noValue',
     path: 'noValue',
-    name: 'No value',
-    description: 'What to show when there is no value',
+    name: '沒有值',
+    description: '沒有值時顯示甚麼?',
 
     editor: standardEditorsRegistry.get('text').editor as any,
     override: standardEditorsRegistry.get('text').editor as any,
@@ -317,7 +317,7 @@ export const getAllStandardFieldConfigs = () => {
   const links: FieldConfigPropertyItem<any, DataLink[], StringFieldConfigSettings> = {
     id: 'links',
     path: 'links',
-    name: 'Data links',
+    name: '數據鏈接',
     editor: standardEditorsRegistry.get('links').editor as any,
     override: standardEditorsRegistry.get('links').editor as any,
     process: dataLinksOverrideProcessor,
@@ -332,7 +332,7 @@ export const getAllStandardFieldConfigs = () => {
   const color: FieldConfigPropertyItem<any, FieldColor | undefined, FieldColorConfigSettings> = {
     id: 'color',
     path: 'color',
-    name: 'Color scheme',
+    name: '配色方案',
     editor: standardEditorsRegistry.get('fieldColor').editor as any,
     override: standardEditorsRegistry.get('fieldColor').editor as any,
     process: identityOverrideProcessor,
@@ -347,7 +347,7 @@ export const getAllStandardFieldConfigs = () => {
   const mappings: FieldConfigPropertyItem<any, ValueMapping[], ValueMappingFieldConfigSettings> = {
     id: 'mappings',
     path: 'mappings',
-    name: 'Value mappings',
+    name: '映射值',
     description: 'Modify the display text based on input value',
 
     editor: standardEditorsRegistry.get('mappings').editor as any,
@@ -363,7 +363,7 @@ export const getAllStandardFieldConfigs = () => {
   const thresholds: FieldConfigPropertyItem<any, ThresholdsConfig, ThresholdsFieldConfigSettings> = {
     id: 'thresholds',
     path: 'thresholds',
-    name: 'Thresholds',
+    name: '門檻',
     editor: standardEditorsRegistry.get('thresholds').editor as any,
     override: standardEditorsRegistry.get('thresholds').editor as any,
     process: thresholdsOverrideProcessor,
