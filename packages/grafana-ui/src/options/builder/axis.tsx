@@ -25,7 +25,7 @@ export function addAxisConfig(
   builder
     .addRadio({
       path: 'axisPlacement',
-      name: 'Placement',
+      name: '置於',
       category,
       defaultValue: graphFieldOptions.axisPlacement[0].value,
       settings: {
@@ -34,11 +34,11 @@ export function addAxisConfig(
     })
     .addTextInput({
       path: 'axisLabel',
-      name: 'Label',
+      name: '標籤',
       category,
       defaultValue: '',
       settings: {
-        placeholder: 'Optional text',
+        placeholder: '自選文字',
       },
       showIf: (c) => c.axisPlacement !== AxisPlacement.Hidden,
       // Do not apply default settings to time and string fields which are used as x-axis fields in Time series and Bar chart panels
@@ -46,35 +46,35 @@ export function addAxisConfig(
     })
     .addNumberInput({
       path: 'axisWidth',
-      name: 'Width',
+      name: '寬度',
       category,
       settings: {
-        placeholder: 'Auto',
+        placeholder: '',
       },
       showIf: (c) => c.axisPlacement !== AxisPlacement.Hidden,
     })
     .addRadio({
       path: 'axisGridShow',
-      name: 'Show grid lines',
+      name: '顯示網格線',
       category,
       defaultValue: undefined,
       settings: {
         options: [
-          { value: undefined, label: 'Auto' },
-          { value: true, label: 'On' },
-          { value: false, label: 'Off' },
+          { value: undefined, label: '自動' },
+          { value: true, label: '開' },
+          { value: false, label: '關' },
         ],
       },
     })
     .addRadio({
       path: 'axisColorMode',
-      name: 'Color',
+      name: '色彩',
       category,
       defaultValue: AxisColorMode.Text,
       settings: {
         options: [
-          { value: AxisColorMode.Text, label: 'Text' },
-          { value: AxisColorMode.Series, label: 'Series' },
+          { value: AxisColorMode.Text, label: '文本Text' },
+          { value: AxisColorMode.Series, label: '系列Series' },
         ],
       },
     });
@@ -84,7 +84,7 @@ export function addAxisConfig(
     .addCustomEditor<void, ScaleDistributionConfig>({
       id: 'scaleDistribution',
       path: 'scaleDistribution',
-      name: 'Scale',
+      name: '規格',
       category,
       editor: ScaleDistributionEditor as any,
       override: ScaleDistributionEditor as any,
@@ -105,7 +105,7 @@ export function addAxisConfig(
       defaultValue: defaultConfig.axisSoftMin,
       category,
       settings: {
-        placeholder: 'See: Standard options > Min',
+        placeholder: '請參閱：標準選項 > 最小值',
       },
     })
     .addNumberInput({
@@ -114,7 +114,7 @@ export function addAxisConfig(
       defaultValue: defaultConfig.axisSoftMax,
       category,
       settings: {
-        placeholder: 'See: Standard options > Max',
+        placeholder: '請參閱：標準選項 > 最大值',
       },
     });
 }
