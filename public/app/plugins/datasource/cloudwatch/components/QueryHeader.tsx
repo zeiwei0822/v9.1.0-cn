@@ -58,7 +58,7 @@ const QueryHeader: React.FC<QueryHeaderProps> = ({ query, sqlCodeEditorIsDirty, 
         isLoading={regionIsLoading}
       />
 
-      <InlineSelect aria-label="Query mode" value={queryMode} options={apiModes} onChange={onQueryModeChange} />
+      <InlineSelect aria-label="查詢方式" value={queryMode} options={apiModes} onChange={onQueryModeChange} />
 
       {queryMode === ExploreMode.Metrics && (
         <MetricsQueryHeader
