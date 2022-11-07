@@ -181,12 +181,11 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
             width={9}
             tooltip={
               <>
-                The maximum data points per series. Used directly by some data sources and used in calculation of auto
-                interval. With streaming data this value is used for the rolling buffer.
+               每個系列的最大數據點。一些數據源會直接使用，用於計算自動間隔。對於流動數據，此值用於滾動緩衝區。
               </>
             }
           >
-            Max data points
+            最大數據點
           </InlineFormLabel>
           <Input
             type="number"
@@ -210,7 +209,7 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
   renderIntervalOption() {
     const { data, dataSource, options } = this.props;
     const realInterval = data.request?.interval;
-    const minIntervalOnDs = dataSource.interval ?? 'No limit';
+    const minIntervalOnDs = dataSource.interval ?? '無限制';
 
     return (
       <>
@@ -220,13 +219,11 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
               width={9}
               tooltip={
                 <>
-                  A lower limit for the interval. Recommended to be set to write frequency, for example <code>1m</code>{' '}
-                  if your data is written every minute. Default value can be set in data source settings for most data
-                  sources.
+                  間隔的下限。建議設置為寫入頻率，例如<code>1m</code>{' '}如果你的數據每分鐘寫入一次。可以在大多數數據源的數據源設置中設置默認值。
                 </>
               }
             >
-              Min interval
+              最小間隔
             </InlineFormLabel>
             <Input
               type="text"
@@ -244,12 +241,11 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
               width={9}
               tooltip={
                 <>
-                  The evaluated interval that is sent to data source and is used in <code>$__interval</code> and{' '}
-                  <code>$__interval_ms</code>
+                  發送到數據源並在 <code>$__interval</code> 和{' '}<code>$__interval_ms</code> 中使用的評估間隔
                 </>
               }
             >
-              Interval
+              間隔
             </InlineFormLabel>
             <InlineFormLabel width={6}>{realInterval}</InlineFormLabel>
             <div className="gf-form-label query-segment-operator">=</div>
@@ -288,8 +284,8 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
 
     return (
       <>
-        {<div className={styles.collapsedText}>MD = {mdDesc}</div>}
-        {<div className={styles.collapsedText}>Interval = {intervalDesc}</div>}
+        {<div className={styles.collapsedText}>最大數據點 = {mdDesc}</div>}
+        {<div className={styles.collapsedText}>間隔 = {intervalDesc}</div>}
       </>
     );
   }
