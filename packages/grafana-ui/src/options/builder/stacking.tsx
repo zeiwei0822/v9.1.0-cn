@@ -66,7 +66,7 @@ export function addStackingConfig(
   builder.addCustomEditor({
     id: 'stacking',
     path: 'stacking',
-    name: 'Stack series',
+    name: '堆積級數',
     category: category,
     defaultValue: defaultConfig,
     editor: StackingEditor,
