@@ -22,7 +22,7 @@ e2e.scenario({
     e2e.components.PanelEditor.DataPane.content()
       .should('be.visible')
       .within(() => {
-        e2e.components.Tab.title('Query').should('be.visible');
+        e2e.components.Tab.title('詢問').should('be.visible');
         // data should be the active tab
         e2e.components.Tab.active().within((li: JQuery<HTMLLIElement>) => {
           expect(li.text()).equals('Query1'); // there's already a query so therefore Query + 1
@@ -34,7 +34,7 @@ e2e.scenario({
 
         //  Bottom pane tabs
         //  Can change to Transform tab
-        e2e.components.Tab.title('Transform').should('be.visible').click();
+        e2e.components.Tab.title('轉換').should('be.visible').click();
         e2e.components.Tab.active().within((li: JQuery<HTMLLIElement>) => {
           expect(li.text()).equals('Transform0'); // there's no transform so therefore Transform + 0
         });
@@ -44,7 +44,7 @@ e2e.scenario({
         e2e.components.PanelAlertTabContent.content().should('not.exist');
 
         //  Can change to Alerts tab (graph panel is the default vis so the alerts tab should be rendered)
-        e2e.components.Tab.title('Alert').should('be.visible').click();
+        e2e.components.Tab.title('警報').should('be.visible').click();
         e2e.components.Tab.active().should('have.text', 'Alert0'); // there's no alert so therefore Alert + 0
 
         // Needs to be disabled until Grafana EE turns unified alerting on by default
@@ -57,7 +57,7 @@ e2e.scenario({
         // e2e.components.PanelAlertTabContent.content().should('exist');
         // e2e.components.PanelAlertTabContent.content().should('be.visible');
 
-        e2e.components.Tab.title('Query').should('be.visible').click();
+        e2e.components.Tab.title('詢問').should('be.visible').click();
       });
 
     // Panel sidebar is rendered open by default
