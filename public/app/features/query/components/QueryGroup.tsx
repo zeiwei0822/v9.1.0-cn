@@ -194,7 +194,7 @@ export class QueryGroup extends PureComponent<Props, State> {
                 <Button
                   variant="secondary"
                   icon="question-circle"
-                  title="Open data source help"
+                  title="開放數據源幫助"
                   onClick={this.onOpenHelp}
                 />
               </div>
