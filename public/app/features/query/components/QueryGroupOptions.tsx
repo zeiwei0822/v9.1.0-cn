@@ -198,7 +198,7 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
           {isAuto && (
             <>
               <div className="gf-form-label query-segment-operator">=</div>
-              <div className="gf-form-label">Width of panel</div>
+              <div className="gf-form-label">面板寬度</div>
             </>
           )}
         </div>
@@ -249,7 +249,7 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
             </InlineFormLabel>
             <InlineFormLabel width={6}>{realInterval}</InlineFormLabel>
             <div className="gf-form-label query-segment-operator">=</div>
-            <div className="gf-form-label">Time range / max data points</div>
+            <div className="gf-form-label">時間範圍/最大數據點</div>
           </div>
         </div>
       </>
@@ -310,7 +310,7 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
         {this.renderCacheTimeoutOption()}
 
         <div className="gf-form">
-          <InlineFormLabel width={9}>Relative time</InlineFormLabel>
+          <InlineFormLabel width={9}>相對時間</InlineFormLabel>
           <Input
             type="text"
             className="width-6"
@@ -323,7 +323,7 @@ export class QueryGroupOptionsEditor extends PureComponent<Props, State> {
         </div>
 
         <div className="gf-form">
-          <span className="gf-form-label width-9">Time shift</span>
+          <span className="gf-form-label width-9">時移</span>
           <Input
             type="text"
             className="width-6"
