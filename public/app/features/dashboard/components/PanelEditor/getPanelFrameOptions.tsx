@@ -66,13 +66,13 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
     )
     .addCategory(
       new OptionsPaneCategoryDescriptor({
-        title: 'Panel links',
+        title: '面板鏈接',
         id: 'Panel links',
         isOpenDefault: false,
         itemsCount: panel.links?.length,
       }).addItem(
         new OptionsPaneItemDescriptor({
-          title: 'Panel links',
+          title: '面板鏈接',
           render: function renderLinks() {
             return (
               <DataLinksInlineEditor
@@ -88,15 +88,15 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
     )
     .addCategory(
       new OptionsPaneCategoryDescriptor({
-        title: 'Repeat options',
+        title: '重複選項',
         id: 'Repeat options',
         isOpenDefault: false,
       })
         .addItem(
           new OptionsPaneItemDescriptor({
-            title: 'Repeat by variable',
+            title: '按變量重複',
             description:
-              'Repeat this panel for each value in the selected variable. This is not visible while in edit mode. You need to go back to dashboard and then update the variable or reload the dashboard.',
+              '對所選變量中的每個值重複此面板。這在編輯模式下不可見。您需要返回儀表板，然後更新變量或重新加載儀表板。',
             render: function renderRepeatOptions() {
               return (
                 <RepeatRowSelect
@@ -112,7 +112,7 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
         )
         .addItem(
           new OptionsPaneItemDescriptor({
-            title: 'Repeat direction',
+            title: '重複方向',
             showIf: () => !!panel.repeat,
             render: function renderRepeatOptions() {
               const directionOptions = [
