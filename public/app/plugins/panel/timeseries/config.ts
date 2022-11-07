@@ -60,7 +60,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
       builder
         .addRadio({
           path: 'drawStyle',
-          name: 'Style',
+          name: '類型',
           category: categoryStyles,
           defaultValue: cfg.drawStyle,
           settings: {
@@ -69,7 +69,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addRadio({
           path: 'lineInterpolation',
-          name: 'Line interpolation',
+          name: '線性插值',
           category: categoryStyles,
           defaultValue: cfg.lineInterpolation,
           settings: {
@@ -79,7 +79,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addRadio({
           path: 'barAlignment',
-          name: 'Bar alignment',
+          name: '條形對齊',
           category: categoryStyles,
           defaultValue: cfg.barAlignment,
           settings: {
@@ -89,7 +89,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addSliderInput({
           path: 'lineWidth',
-          name: 'Line width',
+          name: '行寬',
           category: categoryStyles,
           defaultValue: cfg.lineWidth,
           settings: {
@@ -102,7 +102,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addSliderInput({
           path: 'fillOpacity',
-          name: 'Fill opacity',
+          name: '不透明度',
           category: categoryStyles,
           defaultValue: cfg.fillOpacity,
           settings: {
@@ -115,7 +115,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addRadio({
           path: 'gradientMode',
-          name: 'Gradient mode',
+          name: '漸變模式',
           category: categoryStyles,
           defaultValue: graphFieldOptions.fillGradient[0].value,
           settings: {
@@ -137,7 +137,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         .addCustomEditor<void, LineStyle>({
           id: 'lineStyle',
           path: 'lineStyle',
-          name: 'Line style',
+          name: '線條樣式',
           category: categoryStyles,
           showIf: (c) => c.drawStyle === GraphDrawStyle.Line,
           editor: LineStyleEditor,
@@ -148,7 +148,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         .addCustomEditor<void, boolean>({
           id: 'spanNulls',
           path: 'spanNulls',
-          name: 'Connect null values',
+          name: '連接空值',
           category: categoryStyles,
           defaultValue: false,
           editor: SpanNullsEditor,
@@ -159,7 +159,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addRadio({
           path: 'showPoints',
-          name: 'Show points',
+          name: '顯示點',
           category: categoryStyles,
           defaultValue: graphFieldOptions.showPoints[0].value,
           settings: {
@@ -169,7 +169,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
         })
         .addSliderInput({
           path: 'pointSize',
-          name: 'Point size',
+          name: '點的尺寸',
           category: categoryStyles,
           defaultValue: 5,
           settings: {
@@ -185,7 +185,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
 
       builder.addSelect({
         category: categoryStyles,
-        name: 'Transform',
+        name: '轉換',
         path: 'transform',
         settings: {
           options: [
@@ -211,7 +211,7 @@ export function getGraphFieldConfig(cfg: GraphFieldConfig): SetFieldConfigOption
       builder.addCustomEditor({
         id: 'thresholdsStyle',
         path: 'thresholdsStyle',
-        name: 'Show thresholds',
+        name: '顯示閾值',
         category: ['Thresholds'],
         defaultValue: { mode: GraphTresholdsStyleMode.Off },
         settings: {
