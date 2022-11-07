@@ -12,7 +12,7 @@ import { OptionPaneRenderProps } from './types';
 export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPaneCategoryDescriptor {
   const { panel, onPanelConfigChange } = props;
   const descriptor = new OptionsPaneCategoryDescriptor({
-    title: 'Panel options',
+    title: '面板選項',
     id: 'Panel options',
     isOpenDefault: true,
   });
