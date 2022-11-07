@@ -126,11 +126,11 @@ describe('OptionsPaneOptions', () => {
     const scenario = new OptionsPaneOptionsTestScenario();
     scenario.render();
 
-    expect(screen.getByRole('heading', { name: /Panel options/ })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /Standard options/ })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /Value mappings/ })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /Thresholds/ })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: /TestPanel/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /面板選項/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /標準選項/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /值映射/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /門檻/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /測試面板/ })).toBeInTheDocument();
   });
 
   it('should render custom  options', () => {
