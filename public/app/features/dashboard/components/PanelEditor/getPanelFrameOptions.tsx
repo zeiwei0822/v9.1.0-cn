@@ -20,7 +20,7 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
   return descriptor
     .addItem(
       new OptionsPaneItemDescriptor({
-        title: 'Title',
+        title: '標題',
         value: panel.title,
         popularRank: 1,
         render: function renderTitle() {
@@ -36,7 +36,7 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
     )
     .addItem(
       new OptionsPaneItemDescriptor({
-        title: 'Description',
+        title: '描述',
         description: panel.description,
         value: panel.description,
         render: function renderDescription() {
