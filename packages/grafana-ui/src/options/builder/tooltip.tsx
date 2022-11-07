@@ -12,21 +12,21 @@ export function addTooltipOptions<T extends OptionsWithTooltip>(
         { value: TooltipDisplayMode.None, label: 'Hidden' },
       ]
     : [
-        { value: TooltipDisplayMode.Single, label: 'Single' },
-        { value: TooltipDisplayMode.Multi, label: 'All' },
-        { value: TooltipDisplayMode.None, label: 'Hidden' },
+        { value: TooltipDisplayMode.Single, label: '一個' },
+        { value: TooltipDisplayMode.Multi, label: '全部' },
+        { value: TooltipDisplayMode.None, label: '隱藏' },
       ];
 
   const sortOptions = [
-    { value: SortOrder.None, label: 'None' },
-    { value: SortOrder.Ascending, label: 'Ascending' },
-    { value: SortOrder.Descending, label: 'Descending' },
+    { value: SortOrder.None, label: '不變' },
+    { value: SortOrder.Ascending, label: '上升' },
+    { value: SortOrder.Descending, label: '下降' },
   ];
 
   builder
     .addRadio({
       path: 'tooltip.mode',
-      name: 'Tooltip mode',
+      name: '工具提示模式',
       category,
       defaultValue: 'single',
       settings: {
