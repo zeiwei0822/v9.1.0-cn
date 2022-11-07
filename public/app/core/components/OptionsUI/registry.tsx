@@ -210,7 +210,7 @@ export const getAllStandardFieldConfigs = () => {
   const displayName: FieldConfigPropertyItem<any, string, StringFieldConfigSettings> = {
     id: 'displayName',
     path: 'displayName',
-    name: '顯示名稱e',
+    name: '顯示名稱',
     description: '更改字段或系列名稱',
     editor: standardEditorsRegistry.get('text').editor as any,
     override: standardEditorsRegistry.get('text').editor as any,
