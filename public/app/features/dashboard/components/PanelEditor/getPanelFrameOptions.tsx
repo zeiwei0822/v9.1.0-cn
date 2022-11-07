@@ -52,7 +52,7 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
     )
     .addItem(
       new OptionsPaneItemDescriptor({
-        title: 'Transparent background',
+        title: '透明背景',
         render: function renderTransparent() {
           return (
             <Switch
