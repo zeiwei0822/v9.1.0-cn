@@ -125,7 +125,7 @@ export const plugin = new PanelPlugin<GeomapPanelOptions>(GeomapPanel)
       .addRadio({
         category,
         path: 'tooltip.mode',
-        name: 'Tooltip',
+        name: '提示工具',
         defaultValue: TooltipMode.Details,
         settings: {
           options: [
