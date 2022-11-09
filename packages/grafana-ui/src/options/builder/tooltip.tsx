@@ -35,7 +35,7 @@ export function addTooltipOptions<T extends OptionsWithTooltip>(
     })
     .addRadio({
       path: 'tooltip.sort',
-      name: 'Values sort order',
+      name: '值的排序',
       category,
       defaultValue: SortOrder.None,
       showIf: (options: T) => options.tooltip.mode === TooltipDisplayMode.Multi,
