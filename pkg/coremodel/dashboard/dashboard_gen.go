@@ -109,9 +109,9 @@ const (
 
 // Defines values for DashboardThresholdsMode.
 const (
-	ModelThresholdsModeAbsolute ModelThresholdsMode = "absolute"
+	ModelThresholdsModeAbsolute ModelThresholdsMode = "絕對值"
 
-	ModelThresholdsModePercentage ModelThresholdsMode = "percentage"
+	ModelThresholdsModePercentage ModelThresholdsMode = "百分比"
 )
 
 // Defines values for DashboardVariableModelType.
