@@ -83,7 +83,7 @@ export const fieldTypeMatcherItem: FieldMatcherUIRegistryItem<string> = {
   id: FieldMatcherID.byType,
   component: FieldTypeMatcherEditor,
   matcher: fieldMatchers.get(FieldMatcherID.byType),
-  name: 'Fields with type',
-  description: 'Set properties for fields of a specific type (number, string, boolean)',
+  name: '具類型的字段',
+  description: '為特定類型（數字、字符串、布林值）的字段設置屬性',
   optionsToLabel: (options) => options,
 };
