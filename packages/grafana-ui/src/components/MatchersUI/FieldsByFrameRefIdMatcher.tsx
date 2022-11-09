@@ -39,8 +39,8 @@ export const fieldsByFrameRefIdItem: FieldMatcherUIRegistryItem<string> = {
   id: FieldMatcherID.byFrameRefID,
   component: FieldsByFrameRefIdMatcher,
   matcher: fieldMatchers.get(FieldMatcherID.byFrameRefID),
-  name: 'Fields returned by query',
-  description: 'Set properties for fields from a specific query',
+  name: '查詢返回的字段',
+  description: '為特定查詢中的字段設置屬性',
   optionsToLabel: (options) => options,
 };
 
