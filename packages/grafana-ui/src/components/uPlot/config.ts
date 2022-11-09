@@ -64,9 +64,9 @@ export const graphFieldOptions = {
   ] as Array<SelectableValue<StackingMode>>,
 
   thresholdsDisplayModes: [
-    { label: 'Off', value: GraphTresholdsStyleMode.Off },
-    { label: 'As lines', value: GraphTresholdsStyleMode.Line },
-    { label: 'As filled regions', value: GraphTresholdsStyleMode.Area },
-    { label: 'As filled regions and lines', value: GraphTresholdsStyleMode.LineAndArea },
+    { label: '關閉', value: GraphTresholdsStyleMode.Off },
+    { label: '線性', value: GraphTresholdsStyleMode.Line },
+    { label: '填充區域', value: GraphTresholdsStyleMode.Area },
+    { label: '填充區和線性', value: GraphTresholdsStyleMode.LineAndArea },
   ] as Array<SelectableValue<GraphTresholdsStyleMode>>,
 };
