@@ -221,7 +221,7 @@ export function getFieldOverrideCategories(
           <AddOverrideButtonContainer key="Add override">
             <ValuePicker
               icon="plus"
-              label="Add field override"
+              label="添加字段覆蓋"
               variant="secondary"
               menuPlacement="auto"
               isFullWidth={true}
