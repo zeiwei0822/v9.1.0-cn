@@ -338,7 +338,7 @@ export class PanelEditorUnconnected extends PureComponent<Props> {
       <ToolbarButton
         icon="cog"
         onClick={this.onOpenDashboardSettings}
-        title="Open dashboard settings"
+        title="開啟儀表板"
         key="settings"
       />,
       <ToolbarButton onClick={this.onDiscard} title="Undo all changes" key="discard">
