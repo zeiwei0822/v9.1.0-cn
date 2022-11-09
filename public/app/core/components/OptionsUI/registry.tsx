@@ -348,7 +348,7 @@ export const getAllStandardFieldConfigs = () => {
     id: 'mappings',
     path: 'mappings',
     name: '映射值',
-    description: 'Modify the display text based on input value',
+    description: '根據輸入值修改值',
 
     editor: standardEditorsRegistry.get('mappings').editor as any,
     override: standardEditorsRegistry.get('mappings').editor as any,
