@@ -221,7 +221,7 @@ describe('OptionsPaneOptions', () => {
     scenario.render();
 
     expect(
-      screen.queryByLabelText(selectors.components.ValuePicker.button('Add field override'))
+      screen.queryByLabelText(selectors.components.ValuePicker.button('添加字段覆蓋'))
     ).not.toBeInTheDocument();
   });
 
