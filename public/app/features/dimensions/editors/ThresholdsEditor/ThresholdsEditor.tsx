@@ -236,7 +236,7 @@ export class ThresholdsEditor extends PureComponent<Props, State> {
               </div>
 
               <div>
-                <Label description="Percentage means thresholds relative to min & max">Thresholds mode</Label>
+                <Label description="以百分比表示相對於最小值和最大值的閾值">閾值模式</Label>
                 <RadioButtonGroup options={modes} onChange={this.onModeChanged} value={thresholds.mode} />
               </div>
             </div>
