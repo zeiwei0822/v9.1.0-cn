@@ -90,8 +90,8 @@ export const mockStandardProperties = () => {
   const thresholds = {
     id: 'thresholds',
     path: 'thresholds',
-    name: 'Thresholds',
-    description: 'Manage thresholds',
+    name: '門檻',
+    description: '管理閾值',
 
     editor: () => null,
     override: () => null,
@@ -110,8 +110,8 @@ export const mockStandardProperties = () => {
   const mappings = {
     id: 'mappings',
     path: 'mappings',
-    name: 'Value mappings',
-    description: 'Manage value mappings',
+    name: '映射值',
+    description: '管理映射值',
 
     editor: () => null,
     override: () => null,
