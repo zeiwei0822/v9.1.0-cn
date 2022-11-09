@@ -94,7 +94,7 @@ export function addAxisConfig(
     })
     .addBooleanSwitch({
       path: 'axisCenteredZero',
-      name: 'Centered zero',
+      name: '原點',
       category,
       defaultValue: false,
       showIf: (c) => c.scaleDistribution?.type !== ScaleDistribution.Log,
@@ -121,11 +121,11 @@ export function addAxisConfig(
 
 const DISTRIBUTION_OPTIONS: Array<SelectableValue<ScaleDistribution>> = [
   {
-    label: 'Linear',
+    label: '線性',
     value: ScaleDistribution.Linear,
   },
   {
-    label: 'Logarithmic',
+    label: '對數',
     value: ScaleDistribution.Log,
   },
 ];
