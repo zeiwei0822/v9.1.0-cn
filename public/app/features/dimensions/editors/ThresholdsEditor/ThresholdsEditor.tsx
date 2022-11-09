@@ -222,7 +222,7 @@ export class ThresholdsEditor extends PureComponent<Props, State> {
                 className={styles.addButton}
                 fullWidth
               >
-                Add threshold
+                添加閾值
               </Button>
               <div className={styles.thresholds}>
                 {steps
