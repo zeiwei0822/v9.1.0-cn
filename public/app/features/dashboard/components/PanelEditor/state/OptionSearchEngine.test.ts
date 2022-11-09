@@ -69,7 +69,7 @@ function getOptionCategories(): OptionsPaneCategoryDescriptor[] {
       ),
     new OptionsPaneCategoryDescriptor({
       id: 'Axis',
-      title: 'Axis',
+      title: '坐標軸',
     })
       .addItem(
         new OptionsPaneItemDescriptor({
