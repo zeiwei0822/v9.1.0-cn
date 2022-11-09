@@ -22,9 +22,9 @@ export const DashboardActions: FC<Props> = ({ folderId, canCreateFolders = false
   const MenuActions = () => {
     return (
       <Menu>
-        {canCreateDashboards && <Menu.Item url={actionUrl('new')} label="New Dashboard" />}
-        {!folderId && canCreateFolders && <Menu.Item url="dashboards/folder/new" label="New Folder" />}
-        {canCreateDashboards && <Menu.Item url={actionUrl('import')} label="Import" />}
+        {canCreateDashboards && <Menu.Item url={actionUrl('new')} label="新儀表板" />}
+        {!folderId && canCreateFolders && <Menu.Item url="dashboards/folder/new" label="新建文件夾" />}
+        {canCreateDashboards && <Menu.Item url={actionUrl('import')} label="輸入" />}
       </Menu>
     );
   };
