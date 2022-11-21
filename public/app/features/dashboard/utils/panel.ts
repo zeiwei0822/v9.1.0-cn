@@ -54,7 +54,7 @@ export const copyPanel = (panel: IPanelModel) => {
   }
 
   store.set(LS_PANEL_COPY_KEY, JSON.stringify(saveModel));
-  appEvents.emit(AppEvents.alertSuccess, ['Panel copied. Click **Add panel** icon to paste.']);
+  appEvents.emit(AppEvents.alertSuccess, ['面板已複製。點擊'添加面板'進行粘貼。']);
 };
 
 export const sharePanel = (dashboard: DashboardModel, panel: PanelModel) => {
