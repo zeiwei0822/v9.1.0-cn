@@ -61,7 +61,7 @@ export const InspectContent: React.FC<Props> = ({
   const panelTitle = getTemplateSrv().replace(panel.title, panel.scopedVars, 'text') || 'Panel';
   const title = t({
     id: 'dashboard.inspect.title',
-    message: `Inspect: ${panelTitle}`,
+    message: `檢查： ${panelTitle}`,
   });
 
   return (
