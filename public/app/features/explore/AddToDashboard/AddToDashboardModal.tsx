@@ -199,7 +199,7 @@ export const AddToDashboardModal = ({ onClose, exploreId }: Props) => {
 
         <Modal.ButtonRow>
           <Button type="reset" onClick={onClose} fill="outline" variant="secondary">
-            Cancel
+            取消
           </Button>
           <Button
             type="submit"
@@ -207,10 +207,10 @@ export const AddToDashboardModal = ({ onClose, exploreId }: Props) => {
             onClick={handleSubmit(partial(onSubmit, true))}
             icon="external-link-alt"
           >
-            Open in new tab
+            在新標籤頁中打開
           </Button>
           <Button type="submit" variant="primary" onClick={handleSubmit(partial(onSubmit, false))} icon="apps">
-            Open dashboard
+            打開儀表板
           </Button>
         </Modal.ButtonRow>
       </form>
