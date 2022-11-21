@@ -126,6 +126,6 @@ function formatStats(data: PanelData) {
 
   return t({
     id: 'dashboard.inspect.subtitle',
-    message: `${queryCount} queries with total query time of ${formatted}`,
+    message: `${queryCount}個查詢所耗時間為${formatted}`,
   });
 }
