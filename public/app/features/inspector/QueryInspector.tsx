@@ -264,8 +264,7 @@ export class QueryInspector extends PureComponent<Props, State> {
         <div aria-label={selectors.components.PanelInspector.Query.content}>
           <h3 className="section-heading">Query inspector</h3>
           <p className="small muted">
-            Query inspector allows you to view raw request and response. To collect this data Grafana needs to issue a
-            new query. Click refresh button below to trigger a new query.
+            查詢檢查器允許您查看原始請求和回覆。要收集此數據，Grafana 需要重新查詢。單擊下面的刷新按鈕以重新查詢。
           </p>
         </div>
         {this.renderExecutedQueries(executedQueries)}
@@ -275,17 +274,17 @@ export class QueryInspector extends PureComponent<Props, State> {
             onClick={onRefreshQuery}
             aria-label={selectors.components.PanelInspector.Query.refreshButton}
           >
-            Refresh
+            刷新
           </Button>
 
           {haveData && allNodesExpanded && (
             <Button icon="minus" variant="secondary" className={styles.toolbarItem} onClick={this.onToggleExpand}>
-              Collapse all
+              全部收攏
             </Button>
           )}
           {haveData && !allNodesExpanded && (
             <Button icon="plus" variant="secondary" className={styles.toolbarItem} onClick={this.onToggleExpand}>
-              Expand all
+              全部展開
             </Button>
           )}
 
@@ -296,18 +295,18 @@ export class QueryInspector extends PureComponent<Props, State> {
               icon="copy"
               variant="secondary"
             >
-              Copy to clipboard
+              複製到剪貼板
             </ClipboardButton>
           )}
           <div className="flex-grow-1" />
         </div>
         <div className={styles.content}>
-          {isLoading && <LoadingPlaceholder text="Loading query inspector..." />}
+          {isLoading && <LoadingPlaceholder text="正在加載..." />}
           {!isLoading && haveData && (
             <JSONFormatter json={response} open={openNodes} onDidRender={this.setFormattedJson} />
           )}
           {!isLoading && !haveData && (
-            <p className="muted">No request and response collected yet. Hit refresh button</p>
+            <p className="muted">尚未收集到任何請求和回覆。點擊刷新按鈕</p>
           )}
         </div>
       </div>
