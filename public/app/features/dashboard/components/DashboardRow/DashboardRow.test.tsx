@@ -49,8 +49,8 @@ describe('DashboardRow', () => {
 
   it('should have a row options and delete row button', () => {
     render(<DashboardRow panel={panel} dashboard={dashboardMock} />);
-    expect(screen.getByRole('button', { name: 'Delete row' })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: 'Row options' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '刪除' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: '選項' })).toBeInTheDocument();
   });
 
   it('should not show row drag handle when cannot edit', () => {
