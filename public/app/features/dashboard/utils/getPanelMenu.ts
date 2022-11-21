@@ -100,7 +100,7 @@ export function getPanelMenu(
   if (!panel.isEditing) {
     const viewTextTranslation = t({
       id: 'panel.header-menu.view',
-      message: `View`,
+      message: `瀏覽`,
     });
     menu.push({
       text: viewTextTranslation,
@@ -112,7 +112,7 @@ export function getPanelMenu(
 
   if (dashboard.canEditPanel(panel) && !panel.isEditing) {
     menu.push({
-      text: 'Edit',
+      text: '編輯',
       iconClassName: 'edit',
       onClick: onEditPanel,
       shortcut: 'e',
@@ -121,7 +121,7 @@ export function getPanelMenu(
 
   const shareTextTranslation = t({
     id: 'panel.header-menu.share',
-    message: `Share`,
+    message: `分享`,
   });
 
   menu.push({
@@ -133,7 +133,7 @@ export function getPanelMenu(
 
   if (contextSrv.hasAccessToExplore() && !(panel.plugin && panel.plugin.meta.skipDataQuery)) {
     menu.push({
-      text: 'Explore',
+      text: '探索',
       iconClassName: 'compass',
       onClick: onNavigateToExplore,
       shortcut: 'x',
@@ -153,7 +153,7 @@ export function getPanelMenu(
   if (panel.plugin && !panel.plugin.meta.skipDataQuery) {
     const dataTextTranslation = t({
       id: 'panel.header-menu.inspect-data',
-      message: `Data`,
+      message: `資料`,
     });
 
     inspectMenu.push({
@@ -163,7 +163,7 @@ export function getPanelMenu(
 
     if (dashboard.meta.canEdit) {
       inspectMenu.push({
-        text: 'Query',
+        text: '詢問',
         onClick: (e: React.MouseEvent<any>) => onInspectPanel('query'),
       });
     }
@@ -171,7 +171,7 @@ export function getPanelMenu(
 
   const jsonTextTranslation = t({
     id: 'panel.header-menu.inspect-json',
-    message: `Panel JSON`,
+    message: `JSON面板`,
   });
 
   inspectMenu.push({
@@ -181,7 +181,7 @@ export function getPanelMenu(
 
   const inspectTextTranslation = t({
     id: 'panel.header-menu.inspect',
-    message: `Inspect`,
+    message: `檢查`,
   });
   menu.push({
     type: 'submenu',
@@ -245,7 +245,7 @@ export function getPanelMenu(
   if (!panel.isEditing && subMenu.length) {
     const moreTextTranslation = t({
       id: 'panel.header-menu.more',
-      message: `More...`,
+      message: `更多...`,
     });
     menu.push({
       type: 'submenu',
@@ -260,7 +260,7 @@ export function getPanelMenu(
     menu.push({ type: 'divider', text: '' });
 
     menu.push({
-      text: 'Remove',
+      text: '移除',
       iconClassName: 'trash-alt',
       onClick: onRemovePanel,
       shortcut: 'p r',
