@@ -28,24 +28,24 @@ export const InspectStatsTab: React.FC<InspectStatsTabProps> = ({ data, timeZone
 
   if (requestTime > 0) {
     stats.push({
-      displayName: t({ id: 'dashboard.inspect-stats.request-time', message: 'Total request time' }),
+      displayName: t({ id: 'dashboard.inspect-stats.request-time', message: '總請求時間' }),
       value: requestTime,
       unit: 'ms',
     });
   }
   if (processingTime > 0) {
     stats.push({
-      displayName: t({ id: 'dashboard.inspect-stats.processing-time', message: 'Data processing time' }),
+      displayName: t({ id: 'dashboard.inspect-stats.processing-time', message: '數據處理時間' }),
       value: processingTime,
       unit: 'ms',
     });
   }
   stats.push({
-    displayName: t({ id: 'dashboard.inspect-stats.queries', message: 'Number of queries' }),
+    displayName: t({ id: 'dashboard.inspect-stats.queries', message: '查詢次數' }),
     value: data.request.targets.length,
   });
   stats.push({
-    displayName: t({ id: 'dashboard.inspect-stats.rows', message: 'Total number rows' }),
+    displayName: t({ id: 'dashboard.inspect-stats.rows', message: '總行數' }),
     value: dataRows,
   });
 
@@ -57,8 +57,8 @@ export const InspectStatsTab: React.FC<InspectStatsTabProps> = ({ data, timeZone
     }
   }
 
-  const statsTableName = t({ id: 'dashboard.inspect-stats.table-title', message: 'Stats' });
-  const dataStatsTableName = t({ id: 'dashboard.inspect-stats.data-title', message: 'Data source stats' });
+  const statsTableName = t({ id: 'dashboard.inspect-stats.table-title', message: '數據統計' });
+  const dataStatsTableName = t({ id: 'dashboard.inspect-stats.data-title', message: '統計數據源' });
 
   return (
     <div aria-label={selectors.components.PanelInspector.Stats.content}>
