@@ -196,24 +196,24 @@ export function getPanelMenu(
 
   if (dashboard.canEditPanel(panel) && !(panel.isViewing || panel.isEditing)) {
     subMenu.push({
-      text: 'Duplicate',
+      text: '複製並貼上',
       onClick: onDuplicatePanel,
       shortcut: 'p d',
     });
 
     subMenu.push({
-      text: 'Copy',
+      text: '複製',
       onClick: onCopyPanel,
     });
 
     if (isPanelModelLibraryPanel(panel)) {
       subMenu.push({
-        text: 'Unlink library panel',
+        text: '取消面板鏈接',
         onClick: onUnlinkLibraryPanel,
       });
     } else {
       subMenu.push({
-        text: 'Create library panel',
+        text: '創建面板庫',
         onClick: onAddLibraryPanel,
       });
     }
