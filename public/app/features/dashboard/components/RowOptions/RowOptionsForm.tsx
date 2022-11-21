@@ -26,17 +26,17 @@ export const RowOptionsForm: FC<Props> = ({ repeat, title, onUpdate, onCancel })
     >
       {({ register }) => (
         <>
-          <Field label="Title">
+          <Field label="標題">
             <Input {...register('title')} type="text" />
           </Field>
 
-          <Field label="Repeat for">
+          <Field label="重複">
             <RepeatRowSelect repeat={newRepeat} onChange={onChangeRepeat} />
           </Field>
 
           <Modal.ButtonRow>
             <Button type="button" variant="secondary" onClick={onCancel} fill="outline">
-              Cancel
+              取消
             </Button>
             <Button type="submit">Update</Button>
           </Modal.ButtonRow>
