@@ -90,7 +90,7 @@ export const DataLinksInlineEditor: React.FC<DataLinksInlineEditorProps> = ({
 
       {isEditing && editIndex !== null && (
         <Modal
-          title="Edit link"
+          title="編輯"
           isOpen={true}
           closeOnBackdropClick={false}
           onDismiss={() => {
@@ -109,7 +109,7 @@ export const DataLinksInlineEditor: React.FC<DataLinksInlineEditorProps> = ({
       )}
 
       <Button size="sm" icon="plus" onClick={onDataLinkAdd} variant="secondary">
-        Add link
+        新增鏈接
       </Button>
     </>
   );
