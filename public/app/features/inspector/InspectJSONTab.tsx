@@ -128,7 +128,7 @@ export class InspectJSONTab extends PureComponent<Props, State> {
       <div className={styles.wrap}>
         <div className={styles.toolbar} aria-label={selectors.components.PanelInspector.Json.content}>
           <Field
-            label={t({ id: 'dashboard.inspect-json.select-source', message: 'Select source' })}
+            label={t({ id: 'dashboard.inspect-json.select-source', message: '選擇來源' })}
             className="flex-grow-1"
           >
             <Select
