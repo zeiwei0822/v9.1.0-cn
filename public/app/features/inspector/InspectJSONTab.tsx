@@ -18,24 +18,24 @@ enum ShowContent {
 
 const options: Array<SelectableValue<ShowContent>> = [
   {
-    label: t({ id: 'dashboard.inspect-json.panel-json-label', message: 'Panel JSON' }),
+    label: t({ id: 'dashboard.inspect-json.panel-json-label', message: 'JSON面板' }),
     description: t({
       id: 'dashboard.inspect-json.panel-json-description',
-      message: 'The model saved in the dashboard JSON that configures how everything works.',
+      message: '保存JSON儀表中的一切',
     }),
     value: ShowContent.PanelJSON,
   },
   {
-    label: t({ id: 'dashboard.inspect-json.panel-data-label', message: 'Panel data' }),
+    label: t({ id: 'dashboard.inspect-json.panel-data-label', message: '面板數據' }),
     description: t({
       id: 'dashboard.inspect-json.panel-data-description',
-      message: 'The raw model passed to the panel visualization',
+      message: '原始模型傳給可視化面板',
     }),
     value: ShowContent.PanelData,
   },
   {
-    label: t({ id: 'dashboard.inspect-json.dataframe-label', message: 'DataFrame JSON' }),
-    description: t({ id: 'dashboard.inspect-json.dataframe-description', message: 'JSON formatted DataFrames' }),
+    label: t({ id: 'dashboard.inspect-json.dataframe-label', message: 'JSON資料框' }),
+    description: t({ id: 'dashboard.inspect-json.dataframe-description', message: 'JSON格式的資料框' }),
     value: ShowContent.DataFrames,
   },
 ];
