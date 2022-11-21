@@ -45,9 +45,9 @@ e2e.scenario({
 
     expectDrawerClose();
 
-    expectSubMenuScenario('Data');
-    expectSubMenuScenario('Query');
-    expectSubMenuScenario('Panel JSON', 'JSON');
+    expectSubMenuScenario('資料');
+    expectSubMenuScenario('查詢');
+    expectSubMenuScenario('JSON面板', 'JSON');
 
     e2e.flows.openPanelMenuItem(e2e.flows.PanelMenuItems.Edit, PANEL_UNDER_TEST);
 
