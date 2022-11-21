@@ -66,13 +66,13 @@ export function getPanelFrameCategory(props: OptionPaneRenderProps): OptionsPane
     )
     .addCategory(
       new OptionsPaneCategoryDescriptor({
-        title: '面板鏈接',
+        title: '鏈接網址',
         id: 'Panel links',
         isOpenDefault: false,
         itemsCount: panel.links?.length,
       }).addItem(
         new OptionsPaneItemDescriptor({
-          title: '面板鏈接',
+          title: '鏈接網址',
           render: function renderLinks() {
             return (
               <DataLinksInlineEditor
