@@ -47,7 +47,7 @@ export const DataLinkEditor: React.FC<DataLinkEditorProps> = React.memo(
     return (
       <div className={styles.listItem}>
         <Field label="標題">
-          <Input value={value.title} onChange={onTitleChange} placeholder="Show details" />
+          <Input value={value.title} onChange={onTitleChange} placeholder="" />
         </Field>
 
         <Field label="網址">
