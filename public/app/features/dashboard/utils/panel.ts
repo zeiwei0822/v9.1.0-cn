@@ -27,12 +27,12 @@ export const removePanel = (dashboard: DashboardModel, panel: PanelModel, ask: b
 
     appEvents.publish(
       new ShowConfirmModalEvent({
-        title: 'Remove panel',
-        text: 'Are you sure you want to remove this panel?',
+        title: '移除',
+        text: '您確定要移除此面板嗎？',
         text2: text2,
         icon: 'trash-alt',
         confirmText: confirmText,
-        yesText: 'Remove',
+        yesText: '移除e',
         onConfirm: () => removePanel(dashboard, panel, false),
       })
     );
