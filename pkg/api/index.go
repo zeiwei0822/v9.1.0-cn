@@ -36,17 +36,17 @@ func (hs *HTTPServer) getProfileNode(c *models.ReqContext) *dtos.NavLink {
 
 	children := []*dtos.NavLink{
 		{
-			Text: "Preferences", Id: "profile/settings", Url: hs.Cfg.AppSubURL + "/profile", Icon: "sliders-v-alt",
+			Text: "喜好", Id: "profile/settings", Url: hs.Cfg.AppSubURL + "/profile", Icon: "sliders-v-alt",
 		},
 	}
 
 	children = append(children, &dtos.NavLink{
-		Text: "Notification history", Id: "profile/notifications", Url: hs.Cfg.AppSubURL + "/profile/notifications", Icon: "bell",
+		Text: "通知紀錄", Id: "profile/notifications", Url: hs.Cfg.AppSubURL + "/profile/notifications", Icon: "bell",
 	})
 
 	if setting.AddChangePasswordLink() {
 		children = append(children, &dtos.NavLink{
-			Text: "Change password", Id: "profile/password", Url: hs.Cfg.AppSubURL + "/profile/password",
+			Text: "更改密碼", Id: "profile/password", Url: hs.Cfg.AppSubURL + "/profile/password",
 			Icon: "lock",
 		})
 	}
@@ -54,7 +54,7 @@ func (hs *HTTPServer) getProfileNode(c *models.ReqContext) *dtos.NavLink {
 	if !setting.DisableSignoutMenu {
 		// add sign out first
 		children = append(children, &dtos.NavLink{
-			Text:         "Sign out",
+			Text:         "登出",
 			Id:           "sign-out",
 			Url:          hs.Cfg.AppSubURL + "/logout",
 			Icon:         "arrow-from-right",
@@ -175,7 +175,7 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 	}
 
 	navTree = append(navTree, &dtos.NavLink{
-		Text:           "Starred",
+		Text:           "星標",
 		Id:             "starred",
 		Icon:           "star",
 		SortWeight:     dtos.WeightSavedItems,
@@ -189,9 +189,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 	dashboardsUrl := "/dashboards"
 
 	navTree = append(navTree, &dtos.NavLink{
-		Text:       "Dashboards",
+		Text:       "儀表板",
 		Id:         "dashboards",
-		SubTitle:   "Manage dashboards and folders",
+		SubTitle:   "管理儀表板和文件夾",
 		Icon:       "apps",
 		Url:        hs.Cfg.AppSubURL + dashboardsUrl,
 		SortWeight: dtos.WeightDashboard,
@@ -205,9 +205,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if setting.ExploreEnabled && hasAccess(canExplore, ac.EvalPermission(ac.ActionDatasourcesExplore)) {
 		navTree = append(navTree, &dtos.NavLink{
-			Text:       "Explore",
+			Text:       "探索",
 			Id:         "explore",
-			SubTitle:   "Explore your data",
+			SubTitle:   "探索您的數據",
 			Icon:       "compass",
 			SortWeight: dtos.WeightExplore,
 			Section:    dtos.NavSectionCore,
@@ -238,9 +238,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 	// When topnav is enabled we can test new information architecture where plugins live in Apps category
 	if hs.Features.IsEnabled(featuremgmt.FlagTopnav) {
 		navTree = append(navTree, &dtos.NavLink{
-			Text:        "Apps",
+			Text:        "應用",
 			Icon:        "apps",
-			Description: "App plugins",
+			Description: "應用插件",
 			Id:          "apps",
 			Children:    appLinks,
 			Section:     dtos.NavSectionCore,
@@ -254,9 +254,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if hasAccess(ac.ReqOrgAdmin, datasources.ConfigurationPageAccess) {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "Data sources",
+			Text:        "數據庫",
 			Icon:        "database",
-			Description: "Add and configure data sources",
+			Description: "添加和配置數據庫",
 			Id:          "datasources",
 			Url:         hs.Cfg.AppSubURL + "/datasources",
 		})
@@ -264,9 +264,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if hasAccess(ac.ReqOrgAdmin, ac.EvalPermission(ac.ActionOrgUsersRead)) {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "Users",
+			Text:        "使用者",
 			Id:          "users",
-			Description: "Manage org members",
+			Description: "管理組織成員",
 			Icon:        "user",
 			Url:         hs.Cfg.AppSubURL + "/org/users",
 		})
@@ -274,9 +274,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if hasAccess(hs.ReqCanAdminTeams, teamsAccessEvaluator) {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "Teams",
+			Text:        "團隊",
 			Id:          "teams",
-			Description: "Manage org groups",
+			Description: "管理團隊",
 			Icon:        "users-alt",
 			Url:         hs.Cfg.AppSubURL + "/org/teams",
 		})
@@ -284,9 +284,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if c.OrgRole == models.ROLE_ADMIN {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "Plugins",
+			Text:        "插件",
 			Id:          "plugins",
-			Description: "View and configure plugins",
+			Description: "查看和配置插件",
 			Icon:        "plug",
 			Url:         hs.Cfg.AppSubURL + "/plugins",
 		})
@@ -294,9 +294,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if hasAccess(ac.ReqOrgAdmin, orgPreferencesAccessEvaluator) {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "Preferences",
+			Text:        "喜好",
 			Id:          "org-settings",
-			Description: "Organization preferences",
+			Description: "設置喜好",
 			Icon:        "sliders-v-alt",
 			Url:         hs.Cfg.AppSubURL + "/org",
 		})
@@ -307,9 +307,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 	apiKeysHidden := hideApiKeys == "1" && len(apiKeys) == 0
 	if hasAccess(ac.ReqOrgAdmin, apiKeyAccessEvaluator) && !apiKeysHidden {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "API keys",
+			Text:        "API密鑰",
 			Id:          "apikeys",
-			Description: "Create & manage API keys",
+			Description: "創建和管理 API 密鑰",
 			Icon:        "key-skeleton-alt",
 			Url:         hs.Cfg.AppSubURL + "/org/apikeys",
 		})
@@ -317,9 +317,9 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 
 	if enableServiceAccount(hs, c) {
 		configNodes = append(configNodes, &dtos.NavLink{
-			Text:        "Service accounts",
+			Text:        "服務帳號",
 			Id:          "serviceaccounts",
-			Description: "Manage service accounts",
+			Description: "管理服務帳號",
 			Icon:        "gf-service-account",
 			Url:         hs.Cfg.AppSubURL + "/org/serviceaccounts",
 		})
@@ -340,7 +340,7 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 		navTree = append(navTree, &dtos.NavLink{
 			Id:           "live",
 			Text:         "Live",
-			SubTitle:     "Event streaming",
+			SubTitle:     "事件流",
 			Icon:         "exchange-alt",
 			Url:          hs.Cfg.AppSubURL + "/live",
 			Children:     liveNavLinks,
@@ -355,8 +355,8 @@ func (hs *HTTPServer) getNavTree(c *models.ReqContext, hasEditPerm bool, prefs *
 	if len(configNodes) > 0 {
 		configNode = &dtos.NavLink{
 			Id:         dtos.NavIDCfg,
-			Text:       "Configuration",
-			SubTitle:   "Organization: " + c.OrgName,
+			Text:       "配置",
+			SubTitle:   "組織: " + c.OrgName,
 			Icon:       "cog",
 			Url:        configNodes[0].Url,
 			Section:    dtos.NavSectionConfig,
@@ -403,7 +403,7 @@ func (hs *HTTPServer) addHelpLinks(navTree []*dtos.NavLink, c *models.ReqContext
 		}
 
 		navTree = append(navTree, &dtos.NavLink{
-			Text:       "Help",
+			Text:       "幫助",
 			SubTitle:   helpVersion,
 			Id:         "help",
 			Url:        "#",
@@ -470,22 +470,22 @@ func (hs *HTTPServer) buildDashboardNavLinks(c *models.ReqContext, hasEditPerm b
 
 	dashboardChildNavs := []*dtos.NavLink{}
 	dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{
-		Text: "Browse", Id: "dashboards/browse", Url: hs.Cfg.AppSubURL + "/dashboards", Icon: "sitemap",
+		Text: "瀏覽", Id: "dashboards/browse", Url: hs.Cfg.AppSubURL + "/dashboards", Icon: "sitemap",
 	})
 	dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{
-		Text: "Playlists", Id: "dashboards/playlists", Url: hs.Cfg.AppSubURL + "/playlists", Icon: "presentation-play",
+		Text: "播放列", Id: "dashboards/playlists", Url: hs.Cfg.AppSubURL + "/playlists", Icon: "presentation-play",
 	})
 
 	if c.IsSignedIn {
 		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{
-			Text: "Snapshots",
+			Text: "快照",
 			Id:   "dashboards/snapshots",
 			Url:  hs.Cfg.AppSubURL + "/dashboard/snapshots",
 			Icon: "camera",
 		})
 
 		dashboardChildNavs = append(dashboardChildNavs, &dtos.NavLink{
-			Text: "Library panels",
+			Text: "面板庫",
 			Id:   "dashboards/library-panels",
 			Url:  hs.Cfg.AppSubURL + "/library-panels",
 			Icon: "library-panel",
