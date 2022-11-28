@@ -12,17 +12,17 @@ const step2Key = `${keyPrefix}${step2TutorialTitle.replace(' ', '-').trim().toLo
 
 export const getSteps = (): SetupStep[] => [
   {
-    heading: 'Welcome to Grafana',
-    subheading: 'The steps below will guide you to quickly finish setting up your Grafana installation.',
+    heading: '歡迎來到 Grafana',
+    subheading: '以下步驟將指導您快速完成 Grafana 安裝設置。',
     title: '基礎',
     info: '以下步驟將指導您快速完成 Grafana 安裝設置',
     done: false,
     cards: [
       {
         type: 'tutorial',
-        heading: 'Data source and dashboards',
+        heading: '數據源和儀表板',
         title: step1TutorialTitle,
-        info: 'Set up and understand Grafana if you have no prior experience. This tutorial guides you through the entire process and covers the “Data source” and “Dashboards” steps to the right.',
+        info: '如果您之前沒有經驗，請設置並了解 Grafana。本教程將指導您完成整個過程，並包含右側的“數據源”和“儀表板”步驟。',
         href: 'https://grafana.com/tutorials/grafana-fundamentals',
         icon: 'grafana',
         check: () => Promise.resolve(store.get(step1Key)),
@@ -31,8 +31,8 @@ export const getSteps = (): SetupStep[] => [
       },
       {
         type: 'docs',
-        title: 'Add your first data source',
-        heading: 'data sources',
+        title: '添加您的第一個數據源',
+        heading: '數據源',
         icon: 'database',
         learnHref: 'https://grafana.com/docs/grafana/latest/features/datasources/add-a-data-source',
         href: 'datasources/new',
@@ -51,8 +51,8 @@ export const getSteps = (): SetupStep[] => [
       },
       {
         type: 'docs',
-        heading: 'dashboards',
-        title: 'Create your first dashboard',
+        heading: '儀錶盤',
+        title: '創建您的第一個儀表板',
         icon: 'apps',
         href: 'dashboard/new',
         learnHref: 'https://grafana.com/docs/grafana/latest/guides/getting_started/#create-a-dashboard',
@@ -65,18 +65,18 @@ export const getSteps = (): SetupStep[] => [
     ],
   },
   {
-    heading: 'Setup complete!',
+    heading: '設置完成！',
     subheading:
-      'All necessary steps to use Grafana are done. Now tackle advanced steps or make the best use of this home dashboard – it is, after all, a fully customizable dashboard – and remove this panel.',
+      '使用 Grafana 的所有必要步驟都已完成。現在處理高級步驟或充分利用此主頁儀表板並刪除此面板。',
     title: 'Advanced',
-    info: ' Manage your users and teams and add plugins. These steps are optional',
+    info: ' 管理您的用戶和團隊並添加插件。',
     done: false,
     cards: [
       {
         type: 'tutorial',
-        heading: 'Users',
-        title: 'Create users and teams',
-        info: 'Learn to organize your users in teams and manage resource access and roles.',
+        heading: '用戶',
+        title: '創建用戶和團隊',
+        info: '學習將您的用戶組織成團隊並管理資源訪問和角色。',
         href: 'https://grafana.com/tutorials/create-users-and-teams',
         icon: 'users-alt',
         key: step2Key,
@@ -85,8 +85,8 @@ export const getSteps = (): SetupStep[] => [
       },
       {
         type: 'docs',
-        heading: 'plugins',
-        title: 'Find and install plugins',
+        heading: '插件',
+        title: '查找並安裝插件',
         learnHref: 'https://grafana.com/docs/grafana/latest/plugins/installation',
         href: 'plugins',
         icon: 'plug',
