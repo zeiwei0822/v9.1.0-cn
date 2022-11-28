@@ -20,7 +20,7 @@ export const DocsCard: FC<Props> = ({ card }) => {
     <div className={styles.card}>
       <div className={cardContent}>
         <a href={`${card.href}?utm_source=grafana_gettingstarted`} className={styles.url}>
-          <div className={styles.heading}>{card.done ? 'complete' : card.heading}</div>
+          <div className={styles.heading}>{card.done ? '完備插件' : card.heading}</div>
           <h4 className={styles.title}>{card.title}</h4>
           <div>
             <Icon className={iconStyle(theme, card.done)} name={card.icon} size="xxl" />
@@ -33,7 +33,7 @@ export const DocsCard: FC<Props> = ({ card }) => {
         target="_blank"
         rel="noreferrer"
       >
-        Learn how in the docs <Icon name="external-link-alt" />
+        了解如何使用 <Icon name="external-link-alt" />
       </a>
     </div>
   );
