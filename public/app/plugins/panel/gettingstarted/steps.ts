@@ -68,7 +68,7 @@ export const getSteps = (): SetupStep[] => [
     heading: '設置完成！',
     subheading:
       '使用 Grafana 的所有必要步驟都已完成。現在處理高級步驟或充分利用此主頁儀表板並刪除此面板。',
-    title: 'Advanced',
+    title: '進階',
     info: ' 管理您的用戶和團隊並添加插件。',
     done: false,
     cards: [
