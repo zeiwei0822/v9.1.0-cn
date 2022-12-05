@@ -32,21 +32,21 @@ export const LoginForm: FC<Props> = ({ children, onSubmit, isLoggingIn, password
       <Form onSubmit={onSubmit} validateOn="onChange">
         {({ register, errors }) => (
           <>
-            <Field label="Email or username" invalid={!!errors.user} error={errors.user?.message}>
+            <Field label="電子郵件或用戶名" invalid={!!errors.user} error={errors.user?.message}>
               <Input
-                {...register('user', { required: 'Email or username is required' })}
+                {...register('user', { required: '\n' + '請輸入電子郵件或用戶名' })}
                 autoFocus
                 autoCapitalize="none"
                 placeholder={loginHint}
                 aria-label={selectors.pages.Login.username}
               />
             </Field>
-            <Field label="Password" invalid={!!errors.password} error={errors.password?.message}>
+            <Field label="密碼" invalid={!!errors.password} error={errors.password?.message}>
               <PasswordField
                 id="current-password"
                 autoComplete="current-password"
                 passwordHint={passwordHint}
-                {...register('password', { required: 'Password is required' })}
+                {...register('password', { required: '請輸入密碼' })}
               />
             </Field>
             <Button
