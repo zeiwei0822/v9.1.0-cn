@@ -41,7 +41,7 @@ export function DashboardSearch({ onCloseSearch }: Props) {
           <div>
             <input
               type="text"
-              placeholder={includePanels ? 'Search dashboards and panels by name' : 'Search dashboards by name'}
+              placeholder={includePanels ? '按名稱搜索儀表板和面板' : '按名稱搜索儀表板'}
               value={inputValue}
               onChange={onSearchQueryChange}
               onKeyDown={onKeyDown}
