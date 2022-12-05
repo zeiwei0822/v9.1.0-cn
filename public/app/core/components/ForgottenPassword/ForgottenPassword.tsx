@@ -59,7 +59,7 @@ export const ForgottenPassword: FC = () => {
             />
           </Field>
           <HorizontalGroup>
-            <Button type="submit">Send reset email</Button>
+            <Button type="submit">發送重置郵件</Button>
             <LinkButton fill="text" href={loginHref}>
               回到登入頁面
             </LinkButton>
