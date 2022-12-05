@@ -54,7 +54,7 @@ export const NavBar = React.memo(() => {
     {
       id: SEARCH_ITEM_ID,
       onClick: onOpenSearch,
-      text: 'Search dashboards',
+      text: '搜索儀表板',
       icon: 'search',
     },
     menuOpen
@@ -63,7 +63,7 @@ export const NavBar = React.memo(() => {
   const homeItem: NavModelItem = enrichWithInteractionTracking(
     {
       id: 'home',
-      text: 'Home',
+      text: '首頁',
       url: config.appSubUrl || '/',
       icon: 'grafana',
     },
