@@ -400,7 +400,7 @@ msgstr "插件"
 
 #: public/app/core/components/NavBar/navBarItem-translations.ts
 msgid "nav.profile/password"
-  msgstr "更改密碼"
+msgstr "更改密碼"
 
 #: public/app/core/components/NavBar/navBarItem-translations.ts
 msgid "nav.profile/settings"
@@ -654,83 +654,83 @@ msgstr "暗"
 
 #: public/app/core/components/SharedPreferences/SharedPreferences.tsx
 msgid "shared-preferences.theme.default-label"
-msgstr "Default"
+msgstr "默認"
 
 #: public/app/core/components/SharedPreferences/SharedPreferences.tsx
 msgid "shared-preferences.theme.light-label"
-msgstr "Light"
+msgstr "亮"
 
 #: public/app/core/components/SharedPreferences/SharedPreferences.tsx
 msgid "shared-preferences.title"
-msgstr "Preferences"
+msgstr "喜好"
 
 #: public/app/features/profile/UserOrganizations.tsx
 msgid "user-orgs.current-org-button"
-msgstr "Current"
+msgstr "當前"
 
 #: public/app/features/profile/UserOrganizations.tsx
 msgid "user-orgs.name-column"
-msgstr "Name"
+msgstr "姓名"
 
 #: public/app/features/profile/UserOrganizations.tsx
 msgid "user-orgs.role-column"
-msgstr "Role"
+msgstr "角色"
 
 #: public/app/features/profile/UserOrganizations.tsx
 msgid "user-orgs.select-org-button"
-msgstr "Select organisation"
+msgstr "選擇機構"
 
 #: public/app/features/profile/UserOrganizations.tsx
 msgid "user-orgs.title"
-msgstr "Organizations"
+msgstr "組織"
 
 #: public/app/features/profile/UserProfileEditForm.tsx
 msgid "user-profile.fields.email-error"
-msgstr "Email is required"
+msgstr "電子郵件為必填項"
 
 #: public/app/features/profile/UserProfileEditForm.tsx
 #: public/app/features/profile/UserProfileEditForm.tsx
 msgid "user-profile.fields.email-label"
-msgstr "Email"
+msgstr "電子郵件"
 
 #: public/app/features/profile/UserProfileEditForm.tsx
 msgid "user-profile.fields.name-error"
-msgstr "Name is required"
+msgstr "姓名為必填項"
 
 #: public/app/features/profile/UserProfileEditForm.tsx
 #: public/app/features/profile/UserProfileEditForm.tsx
 msgid "user-profile.fields.name-label"
-msgstr "Name"
+msgstr "姓名"
 
 #: public/app/features/profile/UserProfileEditForm.tsx
 #: public/app/features/profile/UserProfileEditForm.tsx
 msgid "user-profile.fields.username-label"
-msgstr "Username"
+msgstr "用戶名"
 
 #: public/app/features/profile/UserProfileEditForm.tsx
 msgid "user-profile.title"
-msgstr "Edit profile"
+msgstr "編輯個人資料"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-session.browser-column"
-msgstr "Browser & OS"
+msgstr "瀏覽器和操作系統"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-session.created-at-column"
-msgstr "Logged on"
+msgstr "已登錄"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-session.ip-column"
-msgstr "IP address"
+msgstr "IP地址"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-session.revoke"
-msgstr "Revoke user session"
+msgstr "撤銷用戶會話"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-session.seen-at-column"
-msgstr "Last seen"
+msgstr "最後一次露面"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-sessions.loading"
-msgstr "Loading sessions..."
+msgstr "加載會話..."
