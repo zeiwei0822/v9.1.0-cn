@@ -588,7 +588,7 @@ msgstr "7天"
 
 #: public/app/features/dashboard/components/ShareModal/ShareSnapshot.tsx
 msgid "share-modal.snapshot.info-text-1"
-  msgstr "快照是一種公開共享交互式儀表板的即時方式。創建後，我們會去除查詢（指標、模板和註釋）和面板鏈接等敏感數據，只留下嵌入在儀表板中的可見指標數據和系列名稱。"
+msgstr "快照是一種公開共享交互式儀表板的即時方式。創建後，我們會去除查詢（指標、模板和註釋）和面板鏈接等敏感數據，只留下嵌入在儀表板中的可見指標數據和系列名稱。"
 
 #: public/app/features/dashboard/components/ShareModal/ShareSnapshot.tsx
 msgid "share-modal.snapshot.info-text-2"
