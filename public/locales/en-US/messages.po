@@ -729,7 +729,7 @@ msgstr "撤銷用戶會話"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-session.seen-at-column"
-msgstr "最後一次露面"
+msgstr "最後一次出現"
 
 #: public/app/features/profile/UserSessions.tsx
 msgid "user-sessions.loading"
